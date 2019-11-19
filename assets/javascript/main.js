@@ -72,8 +72,30 @@ let allSpecials = [
   "=",
   "~"
 ];
-let passwordLength;
-let confirmLower;
-let confirmUpper;
-let confirmNumeric;
-let confirmSpecial;
+let passwordLength = document.getElementById("passwordLength");
+
+let confirmLower = document.getElementById("confirmLower");
+
+let confirmUpper = document.getElementById("confirmUpper");
+
+let confirmNumeric = document.getElementById("confirmNumeric");
+
+let confirmSpecial = document.getElementById("confirmSpecial");
+
+let userSelections = document.getElementById("userSelections");
+
+function lengthError() {
+  console.log(passwordLength.value);
+
+  if (
+    passwordLength.value < 8 ||
+    passwordLength.value > 128 ||
+    isNaN(passwordLength.value)
+  ) {
+    alert("Error: Password must have between 8 and 128 characters.");
+  }
+}
+
+document
+  .getElementById("generatePassword")
+  .addEventListener("click", lengthError);

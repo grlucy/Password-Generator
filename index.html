@@ -23,7 +23,7 @@
         </div>
         <div class="row">
           <div class="col-lg-5">
-            <form id="userSelections" method="post">
+            <form id="userSelections" action="/" method="post">
               <div class="formContainer">
                 <p>
                   How many characters should the password have?
@@ -67,7 +67,12 @@
                   Special characters
                 </p>
               </div>
-              <input type="submit" class="clickMe" value="Generate Password" />
+              <input
+                type="submit"
+                class="clickMe"
+                id="generatePassword"
+                value="Generate Password"
+              />
             </form>
             <script
               type="text/javascript"
