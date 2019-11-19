@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <script type="text/javascript" src="./assets/javascript/main.js"></script>
   </head>
   <body>
     <section>
@@ -23,50 +24,53 @@
         </div>
         <div class="row">
           <div class="col-lg-5">
-            <form>
+            <form id="userSelections" method="post">
               <div class="formContainer">
-                How many characters should the password have?
-                <br />
-                <input
-                  type="text"
-                  name="passwordLength"
-                  id="passwordLength"
-                  placeholder="8-128"
-                  required
-                />
-                <br />
-                Password should include: (Check at least one)
-                <br />
-                <input
-                  type="checkbox"
-                  name="characterLower"
-                  value="characterLower"
-                />
-                Lowercase characters
-                <br />
-                <input
-                  type="checkbox"
-                  name="characterUpper"
-                  value="characterUpper"
-                />
-                Uppercase characters
-                <br />
-                <input
-                  type="checkbox"
-                  name="characterNumeric"
-                  value="characterNumeric"
-                />
-                Numeric characters
-                <br />
-                <input
-                  type="checkbox"
-                  name="characterSpecial"
-                  value="characterSpecial"
-                />
-                Special characters
+                <p>
+                  How many characters should the password have?
+                  <br />
+                  <input
+                    type="text"
+                    name="passwordLength"
+                    id="passwordLength"
+                    placeholder="8-128"
+                    required
+                  />
+                  <br />
+                  Password should include: (Check at least one)
+                  <br />
+                  <input
+                    type="checkbox"
+                    name="characterLower"
+                    value="characterLower"
+                  />
+                  Lowercase characters
+                  <br />
+                  <input
+                    type="checkbox"
+                    name="characterUpper"
+                    value="characterUpper"
+                  />
+                  Uppercase characters
+                  <br />
+                  <input
+                    type="checkbox"
+                    name="characterNumeric"
+                    value="characterNumeric"
+                  />
+                  Numeric characters
+                  <br />
+                  <input
+                    type="checkbox"
+                    name="characterSpecial"
+                    value="characterSpecial"
+                  />
+                  Special characters
+                </p>
               </div>
               <input type="submit" class="clickMe" value="Generate Password" />
             </form>
+            <script src="./assets/javascript/checkbox.js"></script>
           </div>
           <div class="col-lg-7">
             <div class="displayBox">
