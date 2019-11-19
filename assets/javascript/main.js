@@ -72,3 +72,8 @@ let allSpecials = [
   "=",
   "~"
 ];
+let passwordLength;
+let confirmLower;
+let confirmUpper;
+let confirmNumeric;
+let confirmSpecial;
