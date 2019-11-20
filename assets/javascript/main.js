@@ -1,93 +1,91 @@
 // Declare allCharacters object and assign nested arrays
-const allCharacters = [
-  {
-    allLowers: [
-      "a",
-      "b",
-      "c",
-      "d",
-      "e",
-      "f",
-      "g",
-      "h",
-      "i",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "o",
-      "p",
-      "q",
-      "r",
-      "s",
-      "t",
-      "u",
-      "v",
-      "w",
-      "x",
-      "y",
-      "z"
-    ]
-  },
-  {
-    allUppers: [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F",
-      "G",
-      "H",
-      "I",
-      "J",
-      "K",
-      "L",
-      "M",
-      "N",
-      "O",
-      "P",
-      "Q",
-      "R",
-      "S",
-      "T",
-      "U",
-      "V",
-      "W",
-      "X",
-      "Y",
-      "Z"
-    ]
-  },
-  { allNums: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] },
-  {
-    allSpecials: [
-      "!",
-      "@",
-      "#",
-      "$",
-      "%",
-      "^",
-      "&",
-      "*",
-      "(",
-      ")",
-      "_",
-      "-",
-      "+",
-      "=",
-      "~"
-    ]
-  }
+let allCharacters = [
+  [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z"
+  ],
+  [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z"
+  ],
+  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "~"]
 ];
 
 // Generate random password using if statements to control array concatenation
 function createPassword() {
-  console.log("You made it to createPassword function, hooray!");
+  let confirmLower = document.getElementById("confirmLower").checked;
+
+  let confirmUpper = document.getElementById("confirmUpper").checked;
+
+  let confirmNumeric = document.getElementById("confirmNumeric").checked;
+
+  let confirmSpecial = document.getElementById("confirmSpecial").checked;
+
   let passwordArray = [];
+
   if (confirmLower) {
-    passwordArray.push(allCharacters[0]);
+    passwordArray = passwordArray.concat(allCharacters[0]);
+  }
+
+  if (confirmUpper) {
+    passwordArray = passwordArray.concat(allCharacters[1]);
+  }
+
+  if (confirmNumeric) {
+    passwordArray = passwordArray.concat(allCharacters[2]);
+  }
+
+  if (confirmSpecial) {
+    passwordArray = passwordArray.concat(allCharacters[3]);
   }
   console.log(passwordArray);
 }
