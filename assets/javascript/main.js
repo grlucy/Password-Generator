@@ -83,7 +83,6 @@ function createPassword() {
 
 // Check whether user checked at least one checkbox; If not, alert and prevent further action. If they did it correctly, proceed with generating a password.
 function checkboxError() {
-  // event listener (change) for each checkbox - document.getElementById("confirmLower").checked
   let confirmLower = document.getElementById("confirmLower").checked;
 
   let confirmUpper = document.getElementById("confirmUpper").checked;
