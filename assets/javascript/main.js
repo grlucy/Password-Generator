@@ -102,6 +102,9 @@ function createPassword() {
   console.log(finalPassword);
 
   // Print finalPassword to screen
+  let passwordDisplay = document.getElementById("displayBox");
+
+  passwordDisplay.innerText = finalPassword;
 }
 
 // Check whether user checked at least one checkbox; If not, alert and prevent further action. If they did it correctly, proceed with generating a password.

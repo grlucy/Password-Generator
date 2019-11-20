@@ -1,10 +1,11 @@
-.displayBox {
+#displayBox {
   height: 200px;
   border: 2px dashed blue;
   border-radius: 8px;
   margin-bottom: 15px;
   padding: 8px;
   font-size: 16px;
+  word-break: break-all;
 }
 .displayTextBefore {
   opacity: 0.5;
