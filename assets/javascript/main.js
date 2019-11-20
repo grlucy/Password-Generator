@@ -1,5 +1,5 @@
 // Declare allCharacters object and assign nested arrays
-let allCharacters = [
+const allCharacters = [
   [
     "a",
     "b",
@@ -56,11 +56,11 @@ let allCharacters = [
     "Y",
     "Z"
   ],
-  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "~"]
 ];
 
-// Generate random password using if statements to control array concatenation
+// Generate random password based on user specifications and print to screen
 function createPassword() {
   let confirmLower = document.getElementById("confirmLower").checked;
 
@@ -70,6 +70,7 @@ function createPassword() {
 
   let confirmSpecial = document.getElementById("confirmSpecial").checked;
 
+  // Use concatenation to generate an array of possible characters for the password based on which checkboxes the user selected
   let passwordArray = [];
 
   if (confirmLower) {
@@ -87,7 +88,20 @@ function createPassword() {
   if (confirmSpecial) {
     passwordArray = passwordArray.concat(allCharacters[3]);
   }
-  console.log(passwordArray);
+
+  // Use a loop to randomly select a character from the passwordArray and add it to the finalPassword until finalPassword reaches the length specified by the user
+  let passwordLength = document.getElementById("passwordLength");
+
+  let finalPassword = "";
+
+  for (var i = 1; i <= passwordLength.value; i++) {
+    let newCharacter =
+      passwordArray[Math.floor(Math.random() * passwordArray.length)];
+    finalPassword = finalPassword.concat(newCharacter);
+  }
+  console.log(finalPassword);
+
+  // Print finalPassword to screen
 }
 
 // Check whether user checked at least one checkbox; If not, alert and prevent further action. If they did it correctly, proceed with generating a password.
@@ -106,7 +120,6 @@ function checkboxError() {
     confirmNumeric == false &&
     confirmSpecial == false
   ) {
-    console.log(confirmLower, confirmUpper, confirmNumeric, confirmSpecial);
     alert("Error: Must select at least one type of character.");
   } else {
     createPassword();
