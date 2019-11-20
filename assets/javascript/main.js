@@ -99,7 +99,6 @@ function createPassword() {
       passwordArray[Math.floor(Math.random() * passwordArray.length)];
     finalPassword = finalPassword.concat(newCharacter);
   }
-  console.log(finalPassword);
 
   // Print finalPassword to screen
   let passwordDisplay = document.getElementById("displayBox");
