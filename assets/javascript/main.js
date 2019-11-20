@@ -73,30 +73,41 @@ let allSpecials = [
   "=",
   "~"
 ];
-let passwordLength = document.getElementById("passwordLength");
-
-let confirmLower = document.getElementById("confirmLower").checked;
-
-let confirmUpper = document.getElementById("confirmUpper").checked;
-
-let confirmNumeric = document.getElementById("confirmNumeric").checked;
-
-let confirmSpecial = document.getElementById("confirmSpecial").checked;
 
 let userSelections = document.getElementById("userSelections");
 
 // Generate random password using if statements to control array concatenation
 function createPassword() {
-  // come back to this!!!
-  if (confirmLower) {
-    alert("confirmLower is checked");
+  //come back to this
+}
+
+// Check whether user checked at least one checkbox; If not, alert and prevent further action. If they did it correctly, proceed with generating a password.
+function checkboxError() {
+  // event listener (change) for each checkbox - document.getElementById("confirmLower").checked
+  let confirmLower = document.getElementById("confirmLower").checked;
+
+  let confirmUpper = document.getElementById("confirmUpper").checked;
+
+  let confirmNumeric = document.getElementById("confirmNumeric").checked;
+
+  let confirmSpecial = document.getElementById("confirmSpecial").checked;
+
+  if (
+    confirmLower == false &&
+    confirmUpper == false &&
+    confirmNumeric == false &&
+    confirmSpecial == false
+  ) {
+    console.log(confirmLower, confirmUpper, confirmNumeric, confirmSpecial);
+    alert("Error: Must select at least one type of character.");
+  } else {
+    alert("Yay!");
   }
 }
 
 // Check whether user entered a number between 8 and 128 for password length; If not, error alert and prevent further action. If they did it correctly, proceed with generating a password.
 function lengthError() {
-  console.log(passwordLength.value);
-
+  let passwordLength = document.getElementById("passwordLength");
   if (
     passwordLength.value < 8 ||
     passwordLength.value > 128 ||
@@ -104,7 +115,7 @@ function lengthError() {
   ) {
     alert("Error: Password must have between 8 and 128 characters.");
   } else {
-    createPassword();
+    checkboxError();
   }
 }
 

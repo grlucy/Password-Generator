@@ -1,3 +1,4 @@
+// Error message appears if there are no checkboxes checked
 (function() {
   const form = document.querySelector("#userSelections");
   const checkboxes = form.querySelectorAll("input[type=checkbox]");
