@@ -1,11 +1,19 @@
 /* Global */
 :root {
+  --gradient: linear-gradient(45deg, #039cd5, #1545cb, #6c0cb4, #010520);
 }
 body {
+  background-image: var(--gradient);
+  background-size: 200%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+section {
+  height: 100vh;
 }
 h1 {
   font-family: "Bebas Neue", cursive;
-  color: red;
+  color: white;
   font-size: 75px;
   margin-top: 50px;
 }
