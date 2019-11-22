@@ -11,7 +11,8 @@ In building this password generator, I learned a lot about Javascript objects, f
 ## UI Screenshots
 
 ![Large Screen](/assets/screenshots/LargeScreen.png)
-Format: ![Alt text](url)
+
+![Small Screen](/assets/screenshots/SmallScreen.png)
 
 ## Usage
 
