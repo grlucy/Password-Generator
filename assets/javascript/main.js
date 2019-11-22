@@ -104,6 +104,16 @@ function createPassword() {
   let passwordDisplay = document.getElementById("displayBox");
 
   passwordDisplay.innerText = finalPassword;
+
+  // Turn "Copy to Clipboard" button purple and create hover effect
+  let purpleButton = document.getElementById("copyToClipboard");
+  purpleButton.setAttribute("style", "background-color: var(--mainColor);");
+  purpleButton.onmouseover = function() {
+    purpleButton.setAttribute("style", "background-color: var(--darkColor);");
+  };
+  purpleButton.onmouseout = function() {
+    purpleButton.setAttribute("style", "background-color: var(--mainColor);");
+  };
 }
 
 // Check whether user checked at least one checkbox; If not, alert and prevent further action. If they did it correctly, proceed with generating a password.

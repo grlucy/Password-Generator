@@ -2,6 +2,7 @@
 :root {
   --gradient: linear-gradient(45deg, #039cd5, #1545cb, #6c0cb4, #010520);
   --mainColor: #5012af;
+  --darkColor: #24023f;
 }
 body {
   background-image: var(--gradient);
@@ -49,6 +50,9 @@ h1 {
   display: flex;
   justify-content: flex-end;
 }
+#copyToClipboard {
+  background-color: #ccc;
+}
 
 /* Form styles */
 .clickMe {
@@ -70,6 +74,9 @@ h1 {
   border: 1px solid var(--mainColor);
   border-radius: 8px;
   margin-bottom: 15px;
+}
+#generatePassword:hover {
+  background-color: var(--darkColor);
 }
 
 /* Media queries */
