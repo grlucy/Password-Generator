@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+    <!-- Bootstrap link -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <!-- CSS link -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <!-- Google Fonts link -->
     <link
       href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
       rel="stylesheet"
@@ -22,11 +25,14 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
+            <!-- Page heading -->
             <h1>Password Generator</h1>
           </div>
         </div>
+        <!-- White background -->
         <div class="row whiteBG">
           <div class="col-lg-5">
+            <!-- Form for user input -->
             <form id="userSelections" action="/" method="post">
               <div class="formContainer">
                 <p>
@@ -75,6 +81,7 @@
                   Special characters
                 </p>
               </div>
+              <!-- Button to submit user input form -->
               <button type="button" class="clickMe" id="generatePassword">
                 Generate Password
               </button>
@@ -82,10 +89,12 @@
             <script src="./assets/javascript/main.js"></script>
           </div>
           <div class="col-lg-7">
+            <!-- Box with placeholder text where password will be displayed once generated -->
             <div id="displayBox">
               <p class="displayTextBefore">Generate a password!</p>
             </div>
             <div class="copyBtn">
+              <!-- Button to copy password to clipboard -->
               <button type="button" class="clickMe" id="copyToClipboard">
                 Copy to Clipboard
               </button>
