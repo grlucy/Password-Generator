@@ -1,15 +1,25 @@
 /* Global */
 :root {
   --gradient: linear-gradient(45deg, #039cd5, #1545cb, #6c0cb4, #010520);
+  --mainColor: #5012af;
 }
 body {
   background-image: var(--gradient);
   background-size: 200%;
   background-position: right;
   background-repeat: no-repeat;
+  animation: gradientAnimate 12s ease-in infinite alternate;
+}
+@keyframes gradientAnimate {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
 }
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 h1 {
   font-family: "Bebas Neue", cursive;
@@ -24,8 +34,8 @@ h1 {
 
 /* Password Display Section */
 #displayBox {
-  height: 200px;
-  border: 2px dashed blue;
+  min-height: 225px;
+  border: 2px dashed var(--mainColor);
   border-radius: 8px;
   margin-bottom: 15px;
   padding: 8px;
@@ -43,7 +53,7 @@ h1 {
 /* Form styles */
 .clickMe {
   padding: 10px 15px;
-  background-color: blue;
+  background-color: var(--mainColor);
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -51,14 +61,15 @@ h1 {
   margin-bottom: 15px;
 }
 .formContainer {
-  height: 200px;
+  min-height: 225px;
   margin-bottom: 15px;
 }
 #passwordLength {
   width: 100%;
   padding: 4px 8px;
-  border: 1px solid blue;
+  border: 1px solid var(--mainColor);
   border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 /* Media queries */
@@ -67,7 +78,7 @@ h1 {
     justify-content: flex-start;
   }
   .formContainer {
-    height: auto;
+    min-height: auto;
   }
   h1 {
     font-size: 35px;
