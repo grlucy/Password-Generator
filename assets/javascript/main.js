@@ -61,15 +61,9 @@ const allCharacters = [
 ];
 
 // Generate random password based on user specifications and print to screen
-function createPassword() {
-  let confirmLower = document.getElementById("confirmLower").checked;
-
-  let confirmUpper = document.getElementById("confirmUpper").checked;
-
-  let confirmNumeric = document.getElementById("confirmNumeric").checked;
-
-  let confirmSpecial = document.getElementById("confirmSpecial").checked;
-
+function createPassword(options) {
+  // Use destructuring to get the checkboxes' value - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring
+  const { confirmLower, confirmUpper, confirmNumeric, confirmSpecial } = options;
   // Use concatenation to generate an array of possible characters for the password based on which checkboxes the user selected
   let passwordArray = [];
 
@@ -90,23 +84,23 @@ function createPassword() {
   }
 
   // Use a loop to randomly select a character from the passwordArray and add it to the finalPassword until finalPassword reaches the length specified by the user
-  let passwordLength = document.getElementById("passwordLength");
+  const passwordLength = document.getElementById("passwordLength");
 
   let finalPassword = "";
 
   for (var i = 1; i <= passwordLength.value; i++) {
-    let newCharacter =
+    const newCharacter =
       passwordArray[Math.floor(Math.random() * passwordArray.length)];
     finalPassword = finalPassword.concat(newCharacter);
   }
 
   // Print finalPassword to screen
-  let passwordDisplay = document.getElementById("displayBox");
+  const passwordDisplay = document.getElementById("displayBox");
 
   passwordDisplay.innerText = finalPassword;
 
   // Turn "Copy to Clipboard" button purple and create hover effect
-  let purpleButton = document.getElementById("copyToClipboard");
+  const purpleButton = document.getElementById("copyToClipboard");
   purpleButton.setAttribute("style", "background-color: var(--mainColor);");
   purpleButton.onmouseover = function() {
     purpleButton.setAttribute("style", "background-color: var(--darkColor);");
@@ -118,29 +112,29 @@ function createPassword() {
 
 // Check whether user checked at least one checkbox; If not, alert and prevent further action. If they did it correctly, proceed with generating a password.
 function checkboxError() {
-  let confirmLower = document.getElementById("confirmLower").checked;
+  const confirmLower = document.getElementById("confirmLower").checked;
 
-  let confirmUpper = document.getElementById("confirmUpper").checked;
+  const confirmUpper = document.getElementById("confirmUpper").checked;
 
-  let confirmNumeric = document.getElementById("confirmNumeric").checked;
+  const confirmNumeric = document.getElementById("confirmNumeric").checked;
 
-  let confirmSpecial = document.getElementById("confirmSpecial").checked;
+  const confirmSpecial = document.getElementById("confirmSpecial").checked;
 
   if (
-    confirmLower == false &&
-    confirmUpper == false &&
-    confirmNumeric == false &&
-    confirmSpecial == false
+    confirmLower === false &&
+    confirmUpper === false &&
+    confirmNumeric === false &&
+    confirmSpecial === false
   ) {
     alert("Error: Must select at least one type of character.");
   } else {
-    createPassword();
+    createPassword({ confirmLower, confirmNumeric, confirmSpecial, confirmUpper });
   }
 }
 
 // When user clicks Generate Password button, check whether user entered a number between 8 and 128 for password length; If not, error alert and prevent further action. If they did it correctly, proceed to checkbox error check.
 function lengthError() {
-  let passwordLength = document.getElementById("passwordLength");
+  const passwordLength = document.getElementById("passwordLength");
   if (
     passwordLength.value < 8 ||
     passwordLength.value > 128 ||
