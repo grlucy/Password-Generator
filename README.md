@@ -26,6 +26,8 @@ https://codepen.io/bharatramnani94/post/copy-text-to-clipboard-using-vanilla-jav
 "Fun ways to animate CSS gradients" tutorial by Kevin Powell:
 https://www.youtube.com/watch?v=f3mwKLXpOLk&t=436s
 
+Refactoring contributions by Andre Myrick (https://github.com/AM-Myrick)
+
 ## License
 
 Copyright (c) 2019 Gina Lucy

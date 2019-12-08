@@ -1,10 +1,10 @@
 // Takes password from #displayBox div, converts it into a temporary text input element, selects it, copies it to clipboard and then deletes the input element
 function copyDisplayBox() {
-  var copyText = document.querySelector("#displayBox").innerText;
+  const copyText = document.querySelector("#displayBox").innerText;
   if (copyText === "Generate a password!") {
     return;
   } else {
-    var dummyInput = document.createElement("input");
+    const dummyInput = document.createElement("input");
     dummyInput.type = "text";
     dummyInput.value = copyText;
     document.body.appendChild(dummyInput);

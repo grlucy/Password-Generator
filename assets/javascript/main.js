@@ -62,8 +62,13 @@ const allCharacters = [
 
 // Generate random password based on user specifications and print to screen
 function createPassword(options) {
-  // Use destructuring to get the checkboxes' value - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring
-  const { confirmLower, confirmUpper, confirmNumeric, confirmSpecial } = options;
+  // Use destructuring to get the checkboxes' value
+  const {
+    confirmLower,
+    confirmUpper,
+    confirmNumeric,
+    confirmSpecial
+  } = options;
   // Use concatenation to generate an array of possible characters for the password based on which checkboxes the user selected
   let passwordArray = [];
 
@@ -128,7 +133,12 @@ function checkboxError() {
   ) {
     alert("Error: Must select at least one type of character.");
   } else {
-    createPassword({ confirmLower, confirmNumeric, confirmSpecial, confirmUpper });
+    createPassword({
+      confirmLower,
+      confirmNumeric,
+      confirmSpecial,
+      confirmUpper
+    });
   }
 }
 
