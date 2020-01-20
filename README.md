@@ -2,11 +2,17 @@
 
 ## Description
 
-This is the site I made for the University of Richmond Bootcamp Homework #3: Password Generator assignment. I used HTML, Git, CSS, Bootstrap, and Javascript to develop an application that generates a random password based on user-selected criteria. I made this site fully responsive through the use of Bootstrap and media queries. It is deployed on Github Pages at: https://grlucy.github.io/Password-Generator/
+An application that generates a random password based on user-selected criteria. I made this site fully responsive through the use of Bootstrap and media queries. It is deployed on Github Pages at: https://grlucy.github.io/Password-Generator/
 
 This web browser application is intended for use by individuals and organizations that handle large amounts of sensitive data who need to generate strong, customized passwords quickly. It saves the user time and ensures that their password is truly random and secure.
 
-In building this password generator, I learned a lot about Javascript objects, functions, and events. I also learned how to traverse and manipulate the DOM to create interactive and dynamic applications.
+Technologies used:
+
+> HTML, Git, CSS, Bootstrap, and Javascript
+
+## Demo
+
+![Password Generator demo](/assets/screenshots/Password-Generator-demo.gif)
 
 ## UI Screenshots
 
@@ -20,13 +26,11 @@ The user is asked to specify a password length and what types of characters to i
 
 ## Credits
 
-"Copy text to clipboard using vanilla javascript" tutorial by Bharat Ramnani:
-https://codepen.io/bharatramnani94/post/copy-text-to-clipboard-using-vanilla-javascript
-
-"Fun ways to animate CSS gradients" tutorial by Kevin Powell:
-https://www.youtube.com/watch?v=f3mwKLXpOLk&t=436s
-
-Refactoring contributions by Andre Myrick (https://github.com/AM-Myrick)
+- "Copy text to clipboard using vanilla javascript" tutorial by Bharat Ramnani:
+  https://codepen.io/bharatramnani94/post/copy-text-to-clipboard-using-vanilla-javascript
+- "Fun ways to animate CSS gradients" tutorial by Kevin Powell:
+  https://www.youtube.com/watch?v=f3mwKLXpOLk&t=436s
+- Refactoring contributions by Andre Myrick (https://github.com/AM-Myrick)
 
 ## License
 
